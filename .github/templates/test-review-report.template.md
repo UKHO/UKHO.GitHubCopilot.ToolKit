@@ -1,6 +1,8 @@
-## Work Package Test Review Report Template
+# Work Package Test Review Report Template
 
 > Use this template to review a work package under `./docs/00x-work/` and assess whether its current automated tests provide sufficient coverage, strength, and confidence. Ground findings in repository evidence and separate confirmed gaps from assumptions.
+>
+> Review the relevant `./docs/wiki/` pages before starting the assessment so the review uses the current project baseline. If the review leads to follow-on changes that affect wiki-documented behavior or testing guidance, update the affected wiki pages before the resulting work is closed.
 
 ## Review scope
 

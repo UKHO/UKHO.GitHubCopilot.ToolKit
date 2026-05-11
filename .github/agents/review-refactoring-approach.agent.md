@@ -30,6 +30,7 @@ You are a Senior Refactoring Architect. Your mission is to review a work package
 - Read `.github/templates/refactoring-review-report.template.md` before drafting.
 - Read the target work-package `requirements.md` and `technical-specification.md` when it exists.
 - Review numbered plan files under `plans/` when they help clarify implementation scope or intent.
+- Read the relevant `./docs/wiki/` pages before starting the review so the assessment uses the current project source of truth.
 - Discover only the implementation and related safety-net test files needed to establish evidence.
 
 ### 2. Execute

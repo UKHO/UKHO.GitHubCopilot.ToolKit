@@ -1,6 +1,6 @@
 ﻿---
 description: 'Standardize iterative work documentation under `./docs/00x-work/` so each increment has requirements, a technical specification, and one or more numbered plan files under a plans subfolder.'
-applyTo: 'docs/**/*.md'
+applyTo: 'docs/business-requirements.md, docs/systems-analysis.md, docs/00x-work/**/*.md'
 ---
 
 # Work package documentation instructions
@@ -26,6 +26,7 @@ These rules apply when adding or updating documentation for a unit of work. They
 - You MUST maintain a project-level systems analysis document at `./docs/systems-analysis.md` before commencing any work packages.
   - This document refines the business requirements into system boundary/context, use cases, business rules, analysis-level requirements, and quality attributes.
   - It must remain implementation-agnostic and must not replace per-work-package requirements/specification/plan documents.
+- You MUST review the relevant `./docs/wiki/` pages before creating or updating work-package requirements, technical specifications, plans, review reports, or execution status so the work stays grounded in the current project understanding.
 - You MUST create a dedicated folder under `./docs/` for each unit of work, named `00x-work` where `00x` is a zero-padded sequence number (e.g. `001`) and `work` is a brief description of the task (for example: `001-add-order-endpoint`).
 - You MUST include a `requirements.md` in each `./docs/00x-work/` folder.
 - You MUST ensure each work package `requirements.md` aligns with and links to `../business-requirements.md`.

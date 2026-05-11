@@ -28,6 +28,10 @@ Applies to: `**/*`
 - Reuse and extend existing instructions, prompts, templates, and agents when they already cover the needed pattern closely enough, instead of creating near-duplicate repository assets.
 - Use placeholders, examples, and workflow descriptions that describe patterns rather than repository-specific implementations.
 - Keep documentation about repository workflows at the top level under `docs/` when the guidance is intended for reuse across multiple work packages or teams.
+- For new or existing projects that begin using this repository workflow, create the wiki baseline first, then review `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md`, identify uncovered areas, and add any missing scoped instruction files before creating work-package documentation.
+- Treat `docs/wiki/` as the current project source of truth for Copilot-assisted workflow decisions once the wiki baseline exists.
+- In prompts, agents, templates, and workflow documentation that guide planning or project updates, require contributors to review the relevant wiki pages before drafting plans, requirements, specifications, implementation changes, or workflow updates.
+- In prompts, agents, templates, and workflow documentation that guide planning or project updates, require contributors to update the affected wiki pages after changes are made so the wiki remains aligned with the current project state before the task is considered complete.
 - Do not draft `docs/00x-work/` work packages unless explicitly requested.
 - When generating review reports in this repository, create a new report file instead of updating the existing report so prior report history remains visible.
 
@@ -49,7 +53,6 @@ Applies to: `**/*`
 
 - `https://learn.microsoft.com/`
 
-- `./.github/instructions/architecture.instructions.md`
 - `./.github/instructions/auth.instructions.md`
 - `./.github/instructions/configuration.instructions.md`
 - `./.github/instructions/csharp.instructions.md`

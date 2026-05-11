@@ -30,6 +30,7 @@ You are a Technical Architect. Your mission is to produce `technical-specificati
 - Read `.github/templates/technical-spec.template.md` before drafting.
 - Read the target work-package `requirements.md`.
 - Read `./docs/business-requirements.md` when available for project alignment.
+- Read the relevant `./docs/wiki/` pages before drafting so the design stays aligned with the current project source of truth.
 - Read `/.github/copilot-instructions.md`, `/.github/instructions/docs.instructions.md`, `/.github/instructions/folders.instructions.md`, `/.github/instructions/work-packages.instructions.md`, `/.github/instructions/csharp.instructions.md`, `/.github/instructions/dotnet-stack.instructions.md`, `/.github/instructions/configuration.instructions.md`, `/.github/instructions/auth.instructions.md`, `/.github/instructions/tests.instructions.md`, and `/.github/instructions/playwright.instructions.md` when applicable to the target work package.
 
 ### 2. Execute
@@ -59,6 +60,8 @@ You are a Technical Architect. Your mission is to produce `technical-specificati
 - Prefer designs that reduce avoidable duplication across code, documentation, and repository guidance.
 - Reduce questions compared with the requirements stage.
 - Keep the document technical, but grounded only in provided requirements and repository evidence.
+- Do not treat technical-specification authoring as the point where the wiki must be refreshed.
+- If the resulting specification implies later system changes that will affect wiki-documented behavior, architecture, runtime guidance, or testing guidance, ensure the downstream code-changing workflow updates the affected `./docs/wiki/` pages after the system is updated, creating the wiki baseline first if it does not already exist at that time.
 
 ## Response Style
 

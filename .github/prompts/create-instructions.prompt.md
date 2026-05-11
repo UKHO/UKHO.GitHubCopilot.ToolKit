@@ -21,6 +21,7 @@ Generate a new `*.instructions.md` file for this repository that:
 
 - You need a new reusable set of rules for a specific language, framework, folder, or file type.
 - You want to standardize patterns (testing, naming, architecture, error handling, docs) for a subset of the repo.
+- You have completed the wiki baseline for a project and identified languages, frameworks, folders, file types, or workflows that are not yet covered by existing Copilot instruction files.
 
 ## Inputs
 
@@ -57,11 +58,14 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 - MUST: Apply research selectively (only when it improves correctness).
 - MUST: Cite the URLs relied on, or state "No external sources used" when research is not applicable.
 - MUST: Infer as much as possible from the user's initial idea and subsequent answers.
+- MUST: Review the relevant `docs/wiki/` pages before drafting instructions that govern planning workflows, project updates, implementation standards, or repository workflow behavior.
 - MUST: Inspect the existing instruction files and prefer extending or referencing an existing scoped instruction when that avoids creating a near-duplicate rule set.
 - MUST: Ask clarifying questions until there is enough detail to output a high-quality instructions file.
 - MUST: Ask only one question at a time.
 - MUST: For each question, provide numbered suggested answers and include `Other: <free text>`.
 - MUST: Produce a final `*.instructions.md` that follows the template structure and front matter guidance in `.github/templates/instructions.template.md`.
+- MUST: When the instruction file governs planning workflows or project updates, require contributors to consult the relevant `docs/wiki/` pages before acting and to refresh the affected wiki pages after later implementation or system changes so the wiki remains the source of truth.
+- MUST: When the generated instruction file can govern code-changing workflows that require wiki updates, require contributors to create the wiki baseline under `./docs/wiki/` first if it does not exist when the update is needed.
 - MUST: When the instruction file defines repository coding, stack, or test standards, distinguish repository defaults from absolute mandates and describe how justified deviations should be documented when appropriate.
 
 ### Repo conventions
@@ -86,10 +90,12 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 
 1. Extract what you can from the initial idea.
 2. Research (if applicable) using `microsoft.docs.mcp` to improve correctness.
-3. Ask one clarifying question at a time until all required input and template sections can be completed.
-4. Keep an in-chat draft updated after every user answer.
-5. Turn the collected information into enforceable MUST/SHOULD/MUST NOT rules.
-6. Validate the final file against the Constraints.
+3. Review the relevant `docs/wiki/` pages when the instruction scope affects planning workflows, project updates, implementation standards, or repository workflow behavior, and ensure any wiki refresh it requires happens after the relevant implementation or system change.
+4. Inspect the current repository instruction coverage and prefer extending existing scoped instructions when that is sufficient.
+5. Ask one clarifying question at a time until all required input and template sections can be completed.
+6. Keep an in-chat draft updated after every user answer.
+7. Turn the collected information into enforceable MUST/SHOULD/MUST NOT rules.
+8. Validate the final file against the Constraints.
 
 ### Start condition
 

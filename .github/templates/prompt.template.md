@@ -44,6 +44,8 @@ ${VAR_NAME="default"} <!-- explain what this controls -->
 ## Constraints
 
 - MUST: <non-negotiable requirement>
+- MUST: Review the relevant `docs/wiki/` pages before planning work, guiding project updates, or changing workflow assets.
+- MUST: Update the affected `docs/wiki/` pages after changes when project understanding, workflow guidance, implementation guidance, or usage guidance has changed.
 - MUST NOT: <prohibited behavior>
 - SHOULD: <preferred behavior>
 - Output MUST be: <format>

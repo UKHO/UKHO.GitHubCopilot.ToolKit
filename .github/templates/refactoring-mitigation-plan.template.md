@@ -1,6 +1,8 @@
 ﻿# Work Package Refactoring Mitigation Plan Template
 
 > Use this template to plan how the issues identified in a work-package refactoring review will be mitigated. Keep the plan actionable, traceable to the review findings, and aligned to the repository refactoring guidance so maintainability improves without unintended behavior changes.
+>
+> Review the relevant `./docs/wiki/` pages before drafting this plan so refactoring work stays aligned with the current project understanding. Include wiki updates whenever the mitigation work changes wiki-documented implementation guidance, architecture, testing guidance, local development guidance, or user-visible behavior.
 
 ## Summary
 

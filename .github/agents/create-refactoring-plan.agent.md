@@ -30,6 +30,7 @@ You are a Senior Refactoring Architect. Your mission is to turn a work-package r
 - Read `.github/templates/refactoring-mitigation-plan.template.md` before drafting.
 - Read the target work-package refactoring review report and extract findings, risks, and recommendations.
 - Read `requirements.md`, `technical-specification.md`, and relevant plan files in the target work package.
+- Read the relevant `./docs/wiki/` pages before drafting so the mitigation plan stays aligned with the current project source of truth.
 - Inspect only the repository files needed to confirm likely touch points, safety-net needs, behavior-preservation boundaries, and validation commands.
 
 ### 2. Execute
@@ -42,6 +43,8 @@ You are a Senior Refactoring Architect. Your mission is to turn a work-package r
 - Include supporting tests, implementation updates, or documentation work only when they are needed to make the refactor safe and reviewable.
 - Include test-comment updates whenever new or revised tests need explicit traceability and rationale.
 - Include wiki-update tasks whenever the plan changes implementation guidance, architecture, testing guidance, or user-visible behavior documented by the wiki.
+- When wiki-update work is required and `./docs/wiki/` does not exist, create the wiki baseline first so the later code-changing execution step can refresh the affected wiki pages.
+- Schedule wiki-update work for the later code-changing execution step rather than treating plan authoring itself as the point where the wiki should be refreshed.
 - Use the next available sequence number across all numbered plan files in the target `plans/` folder when creating the refactoring plan.
 - Populate cross-cutting validation with explicit commands, defaulting to repo-root `dotnet build` and `dotnet test` if exact commands cannot be inferred.
 

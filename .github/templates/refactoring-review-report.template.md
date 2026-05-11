@@ -1,6 +1,8 @@
 ﻿# Work Package Refactoring Review Report Template
 
 > Use this template to review a work package under `./docs/00x-work/` and assess whether its current implementation would benefit from targeted refactoring. Ground findings in repository evidence, distinguish confirmed issues from assumptions, and keep recommendations specific enough to feed directly into follow-on planning.
+>
+> Review the relevant `./docs/wiki/` pages before starting the assessment so the review uses the current project baseline. If the review leads to follow-on changes that affect wiki-documented implementation guidance, architecture, testing guidance, or user-visible behavior, update the affected wiki pages before the resulting work is closed.
 
 ## Review scope
 

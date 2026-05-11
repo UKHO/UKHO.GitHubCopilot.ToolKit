@@ -30,6 +30,7 @@ You are a Senior Business Analyst. Your mission is to produce a work-package `re
 - Read `.github/templates/requirements.template.md` before drafting.
 - Read `./docs/business-requirements.md` when it exists or is provided.
 - Read `./docs/systems-analysis.md` when it exists or is provided.
+- Read the relevant `./docs/wiki/` pages before drafting so the work-package scope stays aligned with the current project source of truth.
 - Confirm the target folder follows the `./docs/00x-work/` convention.
 
 ### 2. Execute
@@ -56,6 +57,8 @@ You are a Senior Business Analyst. Your mission is to produce a work-package `re
 - Keep the work package aligned with and linked to `../business-requirements.md`.
 - Use project-level context to seed scope boundaries and avoid conflicting requirements.
 - Resolve ambiguity here instead of deferring it into the technical specification or plan files.
+- Do not treat requirements authoring as the point where the wiki must be refreshed.
+- If the resulting requirements imply later system changes that will affect wiki-documented project understanding or workflow guidance, ensure the downstream code-changing workflow updates the affected `./docs/wiki/` pages after the system is updated, creating the wiki baseline first if it does not already exist at that time.
 
 ## Response Style
 

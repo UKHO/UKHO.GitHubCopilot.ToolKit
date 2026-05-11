@@ -38,6 +38,7 @@ Applies to: `.github/prompts/**/*.prompt.md`
   - Examples: `security`, `playwright`, `csharp`, `edge-cases`.
 - Prefer folder structure to carry broad categorization so file names can stay focused on the prompt's specific purpose.
 - Use the shortest subject wording that remains unambiguous within the prompts folder.
+- When a prompt defines a planning or project-update workflow, prefer explicit instructions that tell contributors to review relevant `docs/wiki/` pages before proceeding and to refresh the wiki after any resulting change.
 
 ### MUST NOT
 

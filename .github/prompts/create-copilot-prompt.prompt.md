@@ -40,11 +40,14 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 - MUST: After receiving the initial idea, run a short research phase using the `microsoft.docs.mcp` server when it improves correctness for Microsoft/.NET/Azure/GitHub/Copilot-related topics.
 - SHOULD: Prefer `microsoft_docs_search`, `microsoft_docs_fetch`, and `microsoft_code_sample_search` during research.
 - MUST: Cite the URLs relied on, or state “No external sources used” when research is not applicable.
+- MUST: Review the relevant `docs/wiki/` pages before drafting any prompt that plans work, guides project updates, or changes repository workflow behavior.
 - MUST: Ask clarifying questions until there is enough detail to output a high-quality prompt.
 - MUST: Ask only one question at a time.
 - MUST: For each question, provide numbered suggested answers and include `Other: <free text>`.
 - MUST: Infer as much as possible; ask only for missing or ambiguous information needed to complete the template.
 - MUST: Produce a final `*.prompt.md` that follows the structure and front matter guidance in `.github/templates/prompt.template.md`.
+- MUST: When the generated prompt plans work or guides project updates, instruct it to review the relevant `docs/wiki/` pages before acting and to refresh the affected wiki pages after later implementation or system changes so the wiki remains the source of truth.
+- MUST: When the generated prompt can lead to code changes that require wiki updates, instruct it to create the wiki baseline under `./docs/wiki/` first if it does not exist when the update is needed.
 - MUST: When the generated prompt discusses repository coding, stack, or testing standards, distinguish repository defaults from absolute mandates and note documented justified deviations when appropriate.
 - MUST: Inspect relevant existing prompts and prefer reuse, extension, or clearer scoping over creating a near-duplicate prompt.
 - Output MUST be: (a) iterative turns that end with one question, and (b) a final message containing exactly one `*.prompt.md` file’s content.
@@ -56,10 +59,11 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 When the user invokes this prompt, treat their first message as the **initial idea**. Do not request them to restate it.
 
 1. (Optional) Research using `microsoft.docs.mcp` after the initial idea.
-2. Draft as much of the final `*.prompt.md` as possible using `.github/templates/prompt.template.md`.
-3. Ask exactly one clarifying question.
-4. After each user answer, update the draft and repeat Step 3 until complete.
-5. When complete, output the final `*.prompt.md` content and stop.
+2. Review the relevant `docs/wiki/` pages when the requested prompt will plan work, guide project updates, or modify workflow behavior, and ensure any wiki refresh it defines happens after the relevant implementation or system change.
+3. Draft as much of the final `*.prompt.md` as possible using `.github/templates/prompt.template.md`.
+4. Ask exactly one clarifying question.
+5. After each user answer, update the draft and repeat Step 4 until complete.
+6. When complete, output the final `*.prompt.md` content and stop.
 
 ### Question flow policy
 

@@ -3,6 +3,8 @@
 > Use this template to capture project-level systems analysis after `./docs/business-requirements.md` is drafted or approved and before creating any `./docs/00x-work/` work packages.
 >
 > This document refines business requirements into system boundary/context, key domain concepts, use cases, business rules, analysis-level requirements, and quality attributes. It must remain implementation-agnostic.
+>
+> Review the relevant `./docs/wiki/` pages before drafting this document so the analysis stays grounded in the current project baseline. If analysis changes affect the wiki's understanding of the project, update the affected wiki pages before the task is considered complete.
 
 ## 1. Summary
 

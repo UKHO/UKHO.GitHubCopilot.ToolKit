@@ -1,6 +1,8 @@
 ﻿# Technical Specification Template
 
 > Use this template to describe *how* the approved requirements will be implemented. This document should trace back to `FRx`, `NFx`, `SRx` (and optional `*Rx`) from `requirements.md` and feed into the initial delivery plan at `plans/001-delivery-plan.md`.
+>
+> Review the relevant pages under `./docs/wiki/` before drafting this specification so the design stays aligned with the current project understanding. If implemented design decisions change wiki-documented behavior, architecture, runtime guidance, or testing guidance, update the affected wiki pages before the work is considered complete.
 
 ## 1. Summary
 

@@ -1,6 +1,8 @@
 ﻿# Requirements Template
 
 > Use this template to capture *what* needs to be delivered. The output of this document is a set of `FRx`, `NFx`, `SRx` (and optional `*Rx`) requirements used by `technical-specification.md` and numbered plan files under `plans/`, starting with `plans/001-delivery-plan.md`.
+>
+> Review the relevant `./docs/wiki/` pages before drafting this document so the work-package scope stays aligned with the current project understanding. If later requirement changes affect wiki-documented project understanding, workflow guidance, or usage guidance, update the affected wiki pages before the work is considered complete.
 
 ## 1. Summary
 

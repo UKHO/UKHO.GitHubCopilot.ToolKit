@@ -30,6 +30,7 @@ You are a Senior Test Architect. Your mission is to review a work package under 
 - Read `.github/templates/test-review-report.template.md` before drafting.
 - Read the target work-package `requirements.md` and `technical-specification.md` when it exists.
 - Review numbered plan files under `plans/` when they help clarify test scope or risk.
+- Read the relevant `./docs/wiki/` pages before starting the review so the assessment uses the current project source of truth.
 - Discover only the implementation and automated test files needed to establish evidence.
 
 ### 2. Execute

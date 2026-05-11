@@ -1,6 +1,8 @@
 ﻿# Work Package Test Mitigation Plan Template
 
 > Use this template to plan how the issues identified in a work-package test review will be mitigated. Keep the plan actionable, traceable to the review findings, and aligned to the repository testing approach.
+>
+> Review the relevant `./docs/wiki/` pages before drafting this plan so testing changes stay aligned with the current project understanding. Include wiki updates whenever the mitigation work changes wiki-documented behavior, testing guidance, local development guidance, or operator guidance.
 
 ## Summary
 

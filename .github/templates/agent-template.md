@@ -42,6 +42,7 @@ You are a [specialized role]. Your mission is to [primary outcome]. Optimize for
 ### 1. Assess
 
 - Clarify the goal and identify any missing context.
+- Review the relevant `docs/wiki/` pages before planning work, guiding project updates, or changing workflow assets.
 - Determine whether the task is analysis-only or requires changes.
 - Identify the files, systems, or artifacts most likely to matter.
 
@@ -49,6 +50,7 @@ You are a [specialized role]. Your mission is to [primary outcome]. Optimize for
 
 - Follow existing patterns before inventing new ones.
 - Make recommendations or changes that are explicit, minimal, and testable.
+- Update the affected `docs/wiki/` pages after changes when project understanding, workflow guidance, implementation guidance, or usage guidance has changed.
 - Call out trade-offs, risks, and assumptions when they affect the outcome.
 
 ### 3. Verify

@@ -30,6 +30,7 @@ You are a Senior Test Architect. Your mission is to turn a work-package test rev
 - Read `.github/templates/test-mitigation-plan.template.md` before drafting.
 - Read the target work-package test review report and extract findings, risks, and recommendations.
 - Read `requirements.md`, `technical-specification.md`, and relevant plan files in the target work package.
+- Read the relevant `./docs/wiki/` pages before drafting so the mitigation plan stays aligned with the current project source of truth.
 - Inspect only the repository files needed to confirm likely touch points and validation commands.
 
 ### 2. Execute
@@ -43,6 +44,8 @@ You are a Senior Test Architect. Your mission is to turn a work-package test rev
 - Include supporting implementation or documentation work only when it is needed to enable stronger tests.
 - Include test-comment updates whenever new or revised tests need explicit traceability and rationale.
 - Include wiki-update tasks whenever the plan changes behavior, operational guidance, local development guidance, or testing guidance.
+- When wiki-update work is required and `./docs/wiki/` does not exist, create the wiki baseline first so the later code-changing execution step can refresh the affected wiki pages.
+- Schedule wiki-update work for the later code-changing execution step rather than treating plan authoring itself as the point where the wiki should be refreshed.
 - Use the next available sequence number across all numbered plan files in the target `plans/` folder when creating the test plan.
 - Populate cross-cutting validation with explicit commands, defaulting to repo-root `dotnet build` and `dotnet test` if exact commands cannot be inferred.
 
