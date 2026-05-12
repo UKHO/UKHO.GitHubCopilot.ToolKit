@@ -4,11 +4,11 @@ This page explains the recommended workflow that the repository supports. It com
 
 Templates are part of that model as the reusable scaffolds behind many generated artifacts. They are not a separate workflow stage. Instead, prompts, agents, and contributors use the templates under `.github/templates/` to create consistent instructions, prompts, plans, requirements, specifications, and review documents.
 
-In this repository, the live `docs/wiki/` folder documents the toolkit itself. When this page refers to `create-wiki.agent.md`, it refers to a reusable downstream-project asset that teams can use in other repositories to generate a project-specific wiki baseline under `docs/wiki/`.
+In this repository, the live `docs/wiki/` folder documents the toolkit itself. When this page refers to `create-wiki.agent.md`, it refers to a reusable downstream-project asset that teams can use in other repositories to generate a project-specific wiki baseline under `docs/wiki/` when an existing project with implementation history has no wiki baseline.
 
-For any new project that does not already have an established history of using GitHub Copilot, start by invoking `create-wiki.agent.md` to create the wiki baseline under `docs/wiki/`. After the wiki is created, review the existing Copilot instruction files, identify project areas that are not yet covered, and create any missing scoped instruction files by using `create-instructions.prompt.md` before continuing with business requirements, systems analysis, or work-package delivery.
+For an existing project that does not already have a wiki baseline, invoke `create-wiki.agent.md` to establish `docs/wiki/` before later planning or project-update work. For a new project, do not treat wiki creation as a separate foundation stage. Instead, create or refresh the relevant wiki pages as the project is delivered so the documentation grows with the implemented solution.
 
-Once the wiki baseline exists, treat the relevant wiki pages as the source of truth for planning and project updates. Prompts, agents, templates, and contributors should consult the wiki before drafting plans, requirements, specifications, implementation changes, reviews, or workflow updates, and refresh the affected wiki pages after each change so the wiki remains aligned with the current project state.
+Once the relevant wiki pages exist, treat them as the source of truth for planning and project updates. Prompts, agents, templates, and contributors should consult the wiki before drafting plans, requirements, specifications, implementation changes, reviews, or workflow updates, and refresh the affected wiki pages after each change so the wiki remains aligned with the current project state.
 
 Where execution agents already embed the required wiki refresh in their own behavior, treat that wiki work as part of the execution step rather than as a separate stage.
 
@@ -16,48 +16,49 @@ Where execution agents already embed the required wiki refresh in their own beha
 
 The repository is organized around a progression from discovery to delivery, then to quality hardening:
 
-1. create the wiki baseline for any new project that does not already have established Copilot context
-2. review relevant wiki pages before every later planning or project-update task
-3. review existing Copilot instructions and close any coverage gaps with new scoped instructions
+1. create the wiki baseline only when onboarding an existing project with implementation history but no wiki baseline
+2. review relevant wiki pages before every later planning or project-update task once those pages exist
+3. review instruction coverage by using `review-instruction-coverage.agent.md` and close any approved coverage gaps with new scoped instructions
 4. establish business intent
 5. establish system understanding
 6. define one work package
 7. design the technical approach
 8. plan delivery
-9. execute delivery
+9. execute delivery, including creating or refreshing wiki content for new projects as the implementation takes shape
 10. review and strengthen testing
 11. review and improve maintainability
 
 ## Primary workflow sequence
 
-The standard sequence for a new package or feature is:
+For a new package or feature, use the standard sequence below. If an existing project with implementation history has no wiki baseline, run `create-wiki.agent.md` before this sequence. For a new project, create or refresh the relevant wiki pages within the execution stages as delivery work progresses. Use `review-instruction-coverage.agent.md` before `create-instructions.prompt.md` when assessing instruction coverage and identifying approved scoped guidance to add.
 
-1. `create-wiki.agent.md` for any existing project that does not already have established Copilot history
-2. review the relevant `docs/wiki/` pages for the task at hand
-3. review `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md` for current coverage
-4. `create-instructions.prompt.md` for any uncovered language, framework, folder, file type, or workflow areas
-5. `create-business-requirements.agent.md`
-6. `create-systems-analysis.agent.md`
-7. `create-requirements.agent.md`
-8. `create-technical-spec.agent.md`
-9. `create-delivery-plan.agent.md`
-10. `execute-delivery-plan.agent.md` (including any required wiki updates)
-11. `review-test-approach.agent.md`
-12. `create-test-plan.agent.md`
-13. `execute-test-plan.agent.md` (including any required wiki updates)
-14. `review-refactoring-approach.agent.md`
-15. `create-refactoring-plan.agent.md`
-16. `execute-refactoring-plan.agent.md` (including any required wiki updates)
+The standard sequence is:
+
+1. `review-instruction-coverage.agent.md`
+2. `create-instructions.prompt.md` for any approved missing scoped guidance
+3. `create-business-requirements.agent.md`
+4. `create-systems-analysis.agent.md`
+5. `create-requirements.agent.md`
+6. `create-technical-spec.agent.md`
+7. `create-delivery-plan.agent.md`
+8. `execute-delivery-plan.agent.md` (including any required wiki updates)
+9. `review-test-approach.agent.md`
+10. `create-test-plan.agent.md`
+11. `execute-test-plan.agent.md` (including any required wiki updates)
+12. `review-refactoring-approach.agent.md`
+13. `create-refactoring-plan.agent.md`
+14. `execute-refactoring-plan.agent.md` (including any required wiki updates)
 
 ## Stage breakdown
 
 ### 1. Project foundation
 
-This stage establishes the wiki, business, and system-level baseline.
+This stage establishes the instruction, business, and system-level baseline. If an existing project with implementation history has no wiki baseline, bootstrap it before or alongside this stage. For a new project, create or refresh wiki content during delivery instead of treating it as a separate foundation activity.
 
 | Asset | Output | Purpose |
 | --- | --- | --- |
-| `create-wiki.agent.md` | `docs/wiki/**/*.md` | Creates or refreshes the wiki baseline that grounds later Copilot-assisted workflow steps |
+| `review-instruction-coverage.agent.md` | instruction coverage review report | Assesses current instruction coverage against the project and wiki context before new scoped guidance is added |
+| `create-instructions.prompt.md` | scoped instruction updates | Adds approved instruction guidance for uncovered language, framework, folder, file type, or workflow areas |
 | `create-business-requirements.agent.md` | `docs/business-requirements.md` | Captures goals, scope, stakeholders, and business requirements |
 | `create-systems-analysis.agent.md` | `docs/systems-analysis.md` | Refines business intent into actors, use cases, rules, quality attributes, and work-package candidates |
 
@@ -77,7 +78,7 @@ This stage implements the work and validates it.
 
 | Asset | Output | Purpose |
 | --- | --- | --- |
-| `execute-delivery-plan.agent.md` | implemented code plus updated plan | Executes the numbered plan, updates checklist progress, runs validation gates, and refreshes affected wiki pages when needed |
+| `execute-delivery-plan.agent.md` | implemented code plus updated plan | Executes the numbered plan, updates checklist progress, runs validation gates, and creates or refreshes affected wiki pages when needed |
 
 ### 4. Test review and mitigation loop
 
@@ -103,15 +104,17 @@ This stage adds an independent maintainability review after delivery or test har
 
 ### Pattern A: New feature or new package
 
-Use the full sequence from the create-wiki agent through refactoring execution when the project is new or does not yet have established Copilot context. Create the wiki first so Copilot has enough grounding before business requirements, systems analysis, and work-package documentation are produced. Immediately after the wiki is created, review the current instruction files and use `create-instructions.prompt.md` to add any missing scoped guidance before delivery work begins. Throughout the rest of the workflow, consult the relevant wiki pages before each planning or project-update task. When delivery, test, or refactoring execution changes wiki-documented behavior or guidance, the corresponding execution agent should refresh the affected wiki pages as part of that step.
+For a new project, use the full sequence from instruction coverage review through refactoring execution, use `review-instruction-coverage.agent.md` before `create-instructions.prompt.md`, and create or refresh wiki pages during delivery, test, and refactoring execution as the implementation becomes real. For an existing project with implementation history but no wiki baseline, create the wiki first so Copilot has enough grounding before later planning and project-update work. After the wiki is available for an existing project, use `review-instruction-coverage.agent.md` to assess the current instruction set and use `create-instructions.prompt.md` to add any approved missing scoped guidance before delivery work begins. Throughout the rest of the workflow, consult the relevant wiki pages before each planning or project-update task. When delivery, test, or refactoring execution changes wiki-documented behavior or guidance, the corresponding execution agent should refresh the affected wiki pages as part of that step.
 
 ### Pattern B: Existing package that only needs implementation
 
+Use this pattern when the package already exists and mainly needs implementation work. If the project already has relevant wiki pages, start by reviewing them. If the project is an existing project with implementation history but no wiki baseline, create that baseline first and then continue with the package workflow.
+
 Use:
 
-1. `create-wiki.agent.md` if the project does not already have a wiki baseline or established Copilot context
-2. review the relevant `docs/wiki/` pages for the task at hand
-3. review `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md` for project coverage
+1. `create-wiki.agent.md` only when the existing project with implementation history has no wiki baseline
+2. review the relevant `docs/wiki/` pages for the task at hand once the relevant wiki pages exist
+3. `review-instruction-coverage.agent.md` to assess `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md` coverage
 4. `create-instructions.prompt.md` for any uncovered language, framework, folder, file type, or workflow areas
 5. `create-requirements.agent.md` if the work package requirements do not already exist
 6. `create-technical-spec.agent.md` if the technical specification does not already exist
@@ -121,11 +124,13 @@ Use:
 
 ### Pattern C: Existing package that mainly needs quality hardening
 
+Use this pattern when the package already exists and mainly needs test hardening, refactoring, or other maintainability improvements. If the project already has relevant wiki pages, start by reviewing them. If the project is an existing project with implementation history but no wiki baseline, create that baseline first and then continue with the quality-hardening workflow.
+
 Use:
 
-1. `create-wiki.agent.md` if the project does not already have a wiki baseline or established Copilot context
-2. review the relevant `docs/wiki/` pages for the task at hand
-3. review `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md` for project coverage
+1. `create-wiki.agent.md` only when the existing project with implementation history has no wiki baseline
+2. review the relevant `docs/wiki/` pages for the task at hand once the relevant wiki pages exist
+3. `review-instruction-coverage.agent.md` to assess `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md` coverage
 4. `create-instructions.prompt.md` for any uncovered language, framework, folder, file type, or workflow areas
 5. `review-test-approach.agent.md`
 6. `create-test-plan.agent.md`
