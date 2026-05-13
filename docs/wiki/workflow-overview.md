@@ -34,13 +34,13 @@ For a new package or feature, use the standard sequence below. If an existing pr
 
 The standard sequence is:
 
-1. `review-instruction-coverage.agent.md`
-2. `create-instructions.prompt.md` for any approved missing scoped guidance
-3. `create-business-requirements.agent.md`
-4. `create-systems-analysis.agent.md`
-5. `create-requirements.agent.md`
-6. `create-technical-spec.agent.md`
-7. `create-delivery-plan.agent.md`
+1. `create-business-requirements.agent.md` for the project
+2. `create-systems-analysis.agent.md` for the project
+3. `review-instruction-coverage.agent.md`
+4. `create-instructions.prompt.md` for any approved missing scoped guidance
+5. `create-requirements.agent.md` for the first work package
+6. `create-technical-spec.agent.md` for the first work package
+7. `create-delivery-plan.agent.md` for the first work package
 8. `execute-delivery-plan.agent.md` (including any required wiki updates)
 9. `review-test-approach.agent.md`
 10. `create-test-plan.agent.md`
