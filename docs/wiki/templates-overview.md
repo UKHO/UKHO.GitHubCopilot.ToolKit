@@ -42,7 +42,7 @@ The repository currently includes these templates.
 
 | Template file | Primary use | Typical output |
 | --- | --- | --- |
-| `agent-template.md` | Create new custom agents | `.github/agents/*.agent.md` |
+| `agent.template.md` | Create new custom agents | `.github/agents/*.agent.md` |
 | `prompt.template.md` | Create new prompt files | `.github/prompts/*.prompt.md` |
 | `instructions.template.md` | Create new scoped instructions | `.github/instructions/*.instructions.md` |
 | `business-requirements.template.md` | Draft project-level business requirements | `docs/business-requirements.md` |

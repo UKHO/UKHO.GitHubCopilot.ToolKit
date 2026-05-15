@@ -9,7 +9,7 @@ description: '<one sentence describing what this prompt does>'
 
 # Strongly recommended
 name: <kebab-case-short-name>
-model: 'gpt-5.2' # or the model you validated this prompt with
+model: 'gpt-5.4' # or the model you validated this prompt with
 
 # Optional
 # tools: ['search', 'web/fetch', 'runCommands', ...]

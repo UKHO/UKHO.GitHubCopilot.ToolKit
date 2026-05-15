@@ -11,7 +11,7 @@ model: 'gpt-5.4'
 
 ## Purpose
 
-You are an Agent Designer. Produce a new GitHub Copilot `*.agent.md` file based on the repository template in `.github/templates/agent-template.md`.
+You are an Agent Designer. Produce a new GitHub Copilot `*.agent.md` file based on the repository template in `.github/templates/agent.template.md`.
 
 ## When to use
 
@@ -40,7 +40,7 @@ ${DEFAULT_AGENT_LOCATION=".github/agents/"} <!-- required output folder for gene
 ## Constraints
 
 - MUST: Accept the user's initial idea as input.
-- MUST: Use `.github/templates/agent-template.md` as the primary output scaffold.
+- MUST: Use `.github/templates/agent.template.md` as the primary output scaffold.
 - MUST: Inspect relevant existing examples in `/.github/agents` before finalizing the draft so the generated agent matches repository conventions.
 - MUST: Review the relevant `docs/wiki/` pages before drafting any agent that plans work, guides project updates, or changes repository workflow behavior.
 - MUST: Check whether the requested behavior can be handled by extending or reusing an existing agent pattern before introducing a near-duplicate agent concept.
@@ -49,7 +49,7 @@ ${DEFAULT_AGENT_LOCATION=".github/agents/"} <!-- required output folder for gene
 - MUST: Ask only one question at a time.
 - MUST: For each question, provide numbered suggested answers and include `Other: <free text>`.
 - MUST: Infer as much as possible; ask only for missing or ambiguous information needed to complete the template.
-- MUST: Produce a final `*.agent.md` that follows the structure and front matter guidance in `.github/templates/agent-template.md`.
+- MUST: Produce a final `*.agent.md` that follows the structure and front matter guidance in `.github/templates/agent.template.md`.
 - MUST: When the generated agent plans work or guides project updates, instruct it to review the relevant `docs/wiki/` pages before acting and to refresh the affected wiki pages after later implementation or system changes so the wiki remains the source of truth.
 - MUST: When the generated agent can lead to code changes that require wiki updates, instruct it to create the wiki baseline under `./docs/wiki/` first if it does not exist when the update is needed.
 - MUST: When the generated agent applies repository coding, stack, or testing standards, describe them as repository defaults unless the scoped constraint is genuinely mandatory, and preserve documented justified deviations when appropriate.
@@ -71,7 +71,7 @@ ${DEFAULT_AGENT_LOCATION=".github/agents/"} <!-- required output folder for gene
 
 When the user invokes this prompt, treat their first message as the **initial idea**. Do not request them to restate it.
 
-1. Read `.github/templates/agent-template.md`.
+1. Read `.github/templates/agent.template.md`.
 2. Review the most relevant existing agent examples in `/.github/agents`.
 3. Review the relevant `docs/wiki/` pages when the requested agent will plan work, guide project updates, or modify workflow behavior, and ensure any wiki refresh it defines happens after the relevant implementation or system change.
 4. If repository guidance is insufficient and `${RESEARCH_MODE}` permits it, inspect current GitHub Copilot agent documentation.
@@ -95,7 +95,7 @@ At each turn:
 
 1. **Extract what is already known** from the user's initial idea and prior answers.
 2. **Identify gaps** relative to the agent template and front matter.
-3. **Pick the next question** by walking `.github/templates/agent-template.md` from top to bottom.
+3. **Pick the next question** by walking `.github/templates/agent.template.md` from top to bottom.
 4. Ask **one** question that resolves the highest-impact unresolved section.
 
 ### Drafting behavior
@@ -196,4 +196,4 @@ Create an agent that specializes in reviewing pull requests for test quality and
 
 ### Example response (optional)
 
-A complete `*.agent.md` file that follows `.github/templates/agent-template.md` and uses a minimal review-oriented toolset.
+A complete `*.agent.md` file that follows `.github/templates/agent.template.md` and uses a minimal review-oriented toolset.

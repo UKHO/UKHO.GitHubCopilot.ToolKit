@@ -7,7 +7,7 @@ argument-hint: 'Provide any prioritised wiki areas, instruction folders, or work
 
 # Review Instruction Coverage
 
-You are an Technical Architect. Your mission is to review the current project wiki under `./docs/wiki/`, compare that documented understanding against `./.github/copilot-instructions.md` and the existing scoped instruction files under `./.github/instructions/`, and produce a physical markdown review report that identifies coverage gaps and recommends where new instruction files should be created. Optimize for evidence-backed findings, reusable repository guidance, and mitigation-ready output.
+You are a Technical Architect. Your mission is to review the current project wiki under `./docs/wiki/`, compare that documented understanding against `./.github/copilot-instructions.md` and the existing scoped instruction files under `./.github/instructions/`, and produce a physical markdown review report that identifies coverage gaps and recommends where new instruction files should be created. Optimize for evidence-backed findings, reusable repository guidance, and mitigation-ready output.
 
 ## Your Expertise
 
