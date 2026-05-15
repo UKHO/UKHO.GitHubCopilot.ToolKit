@@ -50,6 +50,7 @@ The `.github/instructions/` folder contains targeted instruction files for speci
 | `docs.instructions.md` | `docs/**/*.md` | Markdown documentation structure and linking rules |
 | `dotnet-stack.instructions.md` | `src/**/*.cs, src/**/*.csproj, src/**/*.sln, src/**/*.razor, src/**/*.json, infra/**/*` | Optional baseline .NET architecture guidance |
 | `folders.instructions.md` | `**/*` | Folder placement and asset location rules |
+| `good.instructions.md` | `**/*` | Aspirational project-quality guidance for resilient, secure, cloud-first, operable, maintainable, and well-documented outcomes |
 | `playwright.instructions.md` | `test/**/*.cs, test/**/*.csproj` | Playwright .NET test guidance |
 | `prompts.instructions.md` | `.github/prompts/**/*.prompt.md` | Prompt naming and description rules |
 | `refactoring.instructions.md` | `src/**/*.cs, src/**/*.razor, src/**/*.razor.cs, test/**/*.cs` | Safe, behavior-preserving refactoring guidance |
