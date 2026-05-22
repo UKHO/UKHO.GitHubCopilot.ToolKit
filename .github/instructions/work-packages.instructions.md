@@ -1,4 +1,4 @@
-﻿---
+---
 description: 'Standardize iterative work documentation under `./docs/00x-work/` so each increment has requirements, a technical specification, and one or more numbered plan files under a plans subfolder.'
 applyTo: 'docs/business-requirements.md, docs/systems-analysis.md, docs/00x-work/**/*.md'
 ---
