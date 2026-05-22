@@ -144,7 +144,7 @@ When complete, output a single markdown document that is the final `*.agent.md` 
 ---
 description: '<one sentence describing what the agent does>'
 name: 'Agent Display Name'
-model: 'gpt-5.2'
+model: 'gpt-5.4'
 # tools: ['search/codebase', 'read/readFile']
 ---
 
