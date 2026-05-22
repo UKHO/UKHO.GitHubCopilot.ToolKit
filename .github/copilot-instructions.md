@@ -1,4 +1,4 @@
-﻿---
+---
 description: 'Defines repo-wide Copilot guidance for reusable Microsoft project assets so instructions, prompts, and templates remain broadly applicable across repositories.'
 applyTo: '**/*'
 ---
