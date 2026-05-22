@@ -1,4 +1,4 @@
-﻿---
+---
 description: 'Provide optional baseline guidance for repositories that use the Microsoft .NET application stack.'
 applyTo: 'src/**/*.cs, src/**/*.csproj, src/**/*.sln, src/**/*.razor, src/**/*.json, infra/**/*'
 ---
