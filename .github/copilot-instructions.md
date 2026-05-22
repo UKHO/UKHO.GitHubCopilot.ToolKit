@@ -34,6 +34,7 @@ Applies to: `**/*`
 - In prompts, agents, templates, and workflow documentation that guide planning or project updates, require contributors to update the affected wiki pages after changes are made so the wiki remains aligned with the current project state before the task is considered complete.
 - Do not draft `docs/00x-work/` work packages unless explicitly requested.
 - When generating review reports in this repository, create a new report file instead of updating the existing report so prior report history remains visible.
+- Use lowercase model identifiers such as `gpt-5.4` in agent and prompt files to match repository conventions.
 
 ### SHOULD
 

@@ -18,9 +18,9 @@ The repository is organized around a progression from discovery to delivery, the
 
 1. create the wiki baseline only when onboarding an existing project with implementation history but no wiki baseline
 2. review relevant wiki pages before every later planning or project-update task once those pages exist
-3. review instruction coverage by using `review-instruction-coverage.agent.md` and close any approved coverage gaps with new scoped instructions
-4. establish business intent
-5. establish system understanding
+3. establish business intent
+4. establish system understanding
+5. review instruction coverage by using `review-instruction-coverage.agent.md` and close any approved coverage gaps with new scoped instructions
 6. define one work package
 7. design the technical approach
 8. plan delivery
@@ -53,7 +53,7 @@ The standard sequence is:
 
 ### 1. Project foundation
 
-This stage establishes the instruction, business, and system-level baseline. If an existing project with implementation history has no wiki baseline, bootstrap it before or alongside this stage. For a new project, create or refresh wiki content during delivery instead of treating it as a separate foundation activity.
+This stage establishes the business, system, and instruction baseline. If an existing project with implementation history has no wiki baseline, bootstrap it before or alongside this stage. For a new project, create or refresh wiki content during delivery instead of treating it as a separate foundation activity.
 
 | Asset | Output | Purpose |
 | --- | --- | --- |
