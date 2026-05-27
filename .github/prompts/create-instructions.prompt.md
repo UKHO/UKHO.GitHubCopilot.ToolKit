@@ -15,7 +15,7 @@ Generate a new `*.instructions.md` file for this repository that:
 
 - Uses correct markdown front matter
 - Scopes rules via `applyTo`
-- Presents actionable guidance in the same style as existing files under `instructions/`
+- Presents actionable guidance in the same style as existing files under `./.github/instructions/`
 
 ## When to use
 
