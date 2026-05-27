@@ -1,4 +1,4 @@
-﻿---
+---
 description: 'Standardize C# contributions (formatting, naming, nullability, error handling, and test expectations) so code is consistent, maintainable, and production-ready.'
 applyTo: '**/*.cs'
 ---
