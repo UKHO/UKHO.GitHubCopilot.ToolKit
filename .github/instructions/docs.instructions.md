@@ -1,4 +1,4 @@
-﻿---
+---
 description: 'Standardizes how Markdown documentation is authored, structured, and maintained under `./docs/` so it stays readable, navigable, and consistent over time.'
 applyTo: 'docs/**/*.md'
 ---
