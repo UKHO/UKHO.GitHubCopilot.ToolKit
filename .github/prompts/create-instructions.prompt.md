@@ -78,7 +78,7 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
   - `applyTo` (glob or comma-separated globs in a single quoted string)
 - MUST: Use a lowercase kebab-case file name.
 - MUST: The body uses clear headings and bullet lists.
-- MUST: Prefer patterns consistent with existing `instructions/*.instructions.md` files.
+- MUST: Prefer patterns consistent with existing `./.github/instructions/*.instructions.md` files.
 - MUST NOT: Include unrelated rules outside the declared scope.
 - MUST NOT: Use vague guidance ("do it properly", "use best practices") without measurable criteria.
 - MUST NOT: Present repository default standards as absolute mandates unless the constraint is genuinely mandatory for the scoped files or workflow.
