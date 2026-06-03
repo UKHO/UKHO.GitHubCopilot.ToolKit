@@ -20,7 +20,7 @@ The repository is organized around a progression from discovery to delivery, the
 2. review relevant wiki pages before every later planning or project-update task once those pages exist
 3. establish business intent
 4. establish system understanding
-5. review instruction coverage by using `review-instruction-coverage.agent.md` and close any approved coverage gaps with new scoped instructions
+5. review instruction coverage against the business and system baseline by using `review-instruction-coverage.agent.md` and close any approved coverage gaps with new scoped instructions
 6. define one work package
 7. design the technical approach
 8. plan delivery
@@ -53,14 +53,14 @@ The standard sequence is:
 
 ### 1. Project foundation
 
-This stage establishes the business, system, and instruction baseline. If an existing project with implementation history has no wiki baseline, bootstrap it before or alongside this stage. For a new project, create or refresh wiki content during delivery instead of treating it as a separate foundation activity.
+This stage establishes the business and system baseline first, then reviews instruction coverage against that context. If an existing project with implementation history has no wiki baseline, bootstrap it before or alongside this stage. For a new project, create or refresh wiki content during delivery instead of treating it as a separate foundation activity.
 
 | Asset | Output | Purpose |
 | --- | --- | --- |
-| `review-instruction-coverage.agent.md` | instruction coverage review report | Assesses current instruction coverage against the project and wiki context before new scoped guidance is added |
-| `create-instructions.prompt.md` | scoped instruction updates | Adds approved instruction guidance for uncovered language, framework, folder, file type, or workflow areas |
 | `create-business-requirements.agent.md` | `docs/business-requirements.md` | Captures goals, scope, stakeholders, and business requirements |
 | `create-systems-analysis.agent.md` | `docs/systems-analysis.md` | Refines business intent into actors, use cases, rules, quality attributes, and work-package candidates |
+| `review-instruction-coverage.agent.md` | instruction coverage review report | Assesses current instruction coverage against the business, system, and wiki context before new scoped guidance is added |
+| `create-instructions.prompt.md` | scoped instruction updates | Adds approved instruction guidance for uncovered language, framework, folder, file type, or workflow areas |
 
 ### 2. Work-package definition
 
@@ -104,7 +104,7 @@ This stage adds an independent maintainability review after delivery or test har
 
 ### Pattern A: New feature or new package
 
-For a new project, use the full sequence from instruction coverage review through refactoring execution, use `review-instruction-coverage.agent.md` before `create-instructions.prompt.md`, and create or refresh wiki pages during delivery, test, and refactoring execution as the implementation becomes real. For an existing project with implementation history but no wiki baseline, create the wiki first so Copilot has enough grounding before later planning and project-update work. After the wiki is available for an existing project, use `review-instruction-coverage.agent.md` to assess the current instruction set and use `create-instructions.prompt.md` to add any approved missing scoped guidance before delivery work begins. Throughout the rest of the workflow, consult the relevant wiki pages before each planning or project-update task. When delivery, test, or refactoring execution changes wiki-documented behavior or guidance, the corresponding execution agent should refresh the affected wiki pages as part of that step.
+For a new project, use the full sequence from business requirements through refactoring execution, with `review-instruction-coverage.agent.md` following business and systems discovery and preceding `create-instructions.prompt.md`, and create or refresh wiki pages during delivery, test, and refactoring execution as the implementation becomes real. For an existing project with implementation history but no wiki baseline, create the wiki first so Copilot has enough grounding before later planning and project-update work. After the wiki is available for an existing project, use `review-instruction-coverage.agent.md` to assess the current instruction set and use `create-instructions.prompt.md` to add any approved missing scoped guidance before delivery work begins. Throughout the rest of the workflow, consult the relevant wiki pages before each planning or project-update task. When delivery, test, or refactoring execution changes wiki-documented behavior or guidance, the corresponding execution agent should refresh the affected wiki pages as part of that step.
 
 ### Pattern B: Existing package that only needs implementation
 

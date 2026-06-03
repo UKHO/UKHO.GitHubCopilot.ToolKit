@@ -31,13 +31,14 @@ Use an agent when the work is better expressed as a specialist agent-mode workfl
 
 ## Repository prompt inventory
 
-The repository currently contains three reusable prompt files.
+The repository currently contains four reusable prompt files.
 
 | Prompt file | Mode | Purpose |
 | --- | --- | --- |
 | `create-copilot-agent.prompt.md` | `agent` | Interactive workflow that creates a new `.agent.md` file from the repository agent template |
 | `create-copilot-prompt.prompt.md` | `agent` | Interactive workflow that creates a new `.prompt.md` file from the repository prompt template |
 | `create-instructions.prompt.md` | `agent` | Interactive workflow that creates a new `.instructions.md` file from the repository instructions template |
+| `review-pr-comments.prompt.md` | `ask` | Guidance workflow that reviews PR comments for a specific file, explains their likely intent and impact, and recommends a next action without making changes before user approval |
 
 ## Prompt files and templates
 

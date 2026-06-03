@@ -1,4 +1,4 @@
-﻿---
+---
 description: 'Standardize the repository test approach (unit-first with xUnit, plus integration, end-to-end, and requirement-driven functional tests) so test projects are consistent, resilient, and CI-friendly.'
 applyTo: 'test/**/*.cs, test/**/*.csproj'
 ---

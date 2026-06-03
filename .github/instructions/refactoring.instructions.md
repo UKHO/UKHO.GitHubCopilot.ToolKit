@@ -1,4 +1,4 @@
-﻿---
+---
 description: 'Enforce safe, behavior-preserving refactoring practices so code becomes easier to maintain without introducing regressions.'
 applyTo: 'src/**/*.cs, src/**/*.razor, src/**/*.razor.cs, test/**/*.cs'
 ---
