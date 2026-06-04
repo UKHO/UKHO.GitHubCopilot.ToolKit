@@ -1,4 +1,4 @@
-﻿# Requirements Template
+# Requirements Template
 
 > Use this template to capture *what* needs to be delivered. The output of this document is a set of `FRx`, `NFx`, `SRx` (and optional `*Rx`) requirements used by `technical-specification.md` and numbered plan files under `plans/`, starting with `plans/001-delivery-plan.md`.
 >
