@@ -1,9 +1,9 @@
 ---
 description: 'Describe the agent purpose in one actionable sentence.'
+description: 'Describe the agent purpose in one actionable sentence.'
 name: 'Agent Display Name'
 model: 'gpt-5.4'
-tools: ['search/codebase', 'read/readFile']
-# argument-hint: 'Describe the task, scope, and constraints.'
+# tools: ['search/codebase', 'read/readFile']
 # target: 'vscode'
 # user-invocable: true
 # disable-model-invocation: false
