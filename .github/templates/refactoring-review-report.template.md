@@ -1,4 +1,4 @@
-﻿# Work Package Refactoring Review Report Template
+# Work Package Refactoring Review Report Template
 
 > Use this template to review a work package under `./docs/00x-work/` and assess whether its current implementation would benefit from targeted refactoring. Ground findings in repository evidence, distinguish confirmed issues from assumptions, and keep recommendations specific enough to feed directly into follow-on planning.
 >
