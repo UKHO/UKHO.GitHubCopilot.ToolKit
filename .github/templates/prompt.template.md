@@ -2,7 +2,7 @@
 
 Copy this file content into a new `*.prompt.md` file and fill in the placeholders.
 
-```markdown
+````markdown
 ---
 agent: 'agent' # one of: agent | ask | Plan
 description: '<one sentence describing what this prompt does>'
