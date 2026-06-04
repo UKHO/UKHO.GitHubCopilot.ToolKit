@@ -1,4 +1,4 @@
-﻿# Work Package Test Mitigation Plan Template
+# Work Package Test Mitigation Plan Template
 
 > Use this template to plan how the issues identified in a work-package test review will be mitigated. Keep the plan actionable, traceable to the review findings, and aligned to the repository testing approach.
 >
