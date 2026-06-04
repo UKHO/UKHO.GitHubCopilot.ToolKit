@@ -1,4 +1,4 @@
-﻿# Work Package Refactoring Mitigation Plan Template
+# Work Package Refactoring Mitigation Plan Template
 
 > Use this template to plan how the issues identified in a work-package refactoring review will be mitigated. Keep the plan actionable, traceable to the review findings, and aligned to the repository refactoring guidance so maintainability improves without unintended behavior changes.
 >
