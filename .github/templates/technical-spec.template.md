@@ -1,4 +1,4 @@
-﻿# Technical Specification Template
+# Technical Specification Template
 
 > Use this template to describe *how* the approved requirements will be implemented. This document should trace back to `FRx`, `NFx`, `SRx` (and optional `*Rx`) from `requirements.md` and feed into the initial delivery plan at `plans/001-delivery-plan.md`.
 >
