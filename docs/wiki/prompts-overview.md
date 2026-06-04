@@ -17,9 +17,7 @@ In Visual Studio, prompt files can be:
 
 This repository uses prompt files mainly for reusable authoring workflows. They help contributors create or extend Copilot assets consistently, often by guiding users toward the repository templates that define the output structure.
 
-In the recommended startup workflow, `create-wiki.agent.md` establishes the wiki baseline first. `create-instructions.prompt.md` is then used to close any instruction-coverage gaps the wiki reveals before delivery work proceeds. After that baseline exists, planning and project-update prompts should direct contributors to review the relevant wiki pages before acting and refresh the affected wiki pages after changes.
-
-Wiki bootstrap is handled by the repository's `create-wiki.agent.md` custom agent rather than by a prompt file.
+In the recommended startup workflow, establish a wiki baseline before planning or delivery work. For existing projects with implementation history but no wiki baseline, run `create-wiki.agent.md`; for new projects, create or refresh the relevant wiki pages during delivery as the implementation takes shape. `create-instructions.prompt.md` is then used to close any instruction-coverage gaps the wiki reveals before delivery work proceeds.
 
 Use a prompt file when:
 
