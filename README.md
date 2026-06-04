@@ -8,7 +8,7 @@ The goal of this project is to collect and organize reusable materials that make
 
 The repository presents one documentation-led approach to using GitHub Copilot on new or existing projects. Teams can adapt that approach to fit their own delivery model, tooling, governance, and engineering practices.
 
-In the suggested workflow, the wiki under [`docs/wiki/`](./docs/wiki/index.md) is created or refreshed first and then maintained as the project source of truth. Copilot should consult the relevant wiki pages before planning or changing a project, and update the wiki again after changes that affect project understanding.
+In the suggested workflow, establish a wiki baseline under [`docs/wiki/`](./docs/wiki/index.md) (create it first for existing projects that don’t already have one; for new projects, create or refresh the relevant pages as delivery work progresses) and then maintain it as the project source of truth. Copilot should consult the relevant wiki pages before planning or changing a project, and update the wiki again after changes that affect project understanding.
 
 ## Start here
 
