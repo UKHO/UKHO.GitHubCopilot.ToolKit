@@ -13,7 +13,7 @@
 - **Status**: <draft|review|approved>
 - **Outputs**:
   - `./docs/systems-analysis.md`
-- Work packages under `./docs/00x-work/` with `requirements.md`, `technical-specification.md`, and numbered plan files under `plans/`
+  - Work packages under `./docs/00x-work/` with `requirements.md`, `technical-specification.md`, and numbered plan files under `plans/`
 
 ### 1.1 Links
 
