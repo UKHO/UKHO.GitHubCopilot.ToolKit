@@ -22,7 +22,7 @@ This wiki is intended for contributors who need to:
 | Custom agents | `.github/agents/` | Reusable specialist agents for creation, review, planning, and execution workflows |
 | Prompt files | `.github/prompts/` | Reusable prompt entry points for prompt, instruction, agent, and documentation authoring |
 | Templates | `.github/templates/` | Reusable scaffolds that standardize new prompts, agents, instructions, plans, and documentation artifacts |
-| Agent skills | `.github/skills/` | Task-specific skills that agents can auto-discover when present |
+| Agent skills | `.github/skills/` (not currently present) | Task-specific skills that agents can auto-discover when present |
 | Wiki | `docs/wiki/` | Human-readable reference documentation for the repository |
 
 ## Start here
