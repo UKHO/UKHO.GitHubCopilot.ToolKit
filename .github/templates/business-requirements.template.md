@@ -1,4 +1,4 @@
-﻿# Business Requirements Template
+# Business Requirements Template
 
 > Use this template to capture the business context and high-level requirements for the overall project. This document describes *what* should be built and *why* (not the technical solution). It is the foundation for systems analysis and work packages under `./docs/00x-work/` when that workflow is in use.
 >
