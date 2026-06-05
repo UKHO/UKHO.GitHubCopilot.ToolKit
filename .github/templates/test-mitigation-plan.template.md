@@ -3,6 +3,8 @@
 > Use this template to plan how the issues identified in a work-package test review will be mitigated. Keep the plan actionable, traceable to the review findings, and aligned to the repository testing approach.
 >
 > Review the relevant `./docs/wiki/` pages before drafting this plan so testing changes stay aligned with the current project understanding. Include wiki updates whenever the mitigation work changes wiki-documented behavior, testing guidance, local development guidance, or operator guidance.
+>
+> Keep work items execution-ready and lean. Prefer exact paths, commands, and finding identifiers over explanatory prose that does not change implementation or validation.
 
 ## Summary
 
@@ -67,8 +69,8 @@ Before starting *any* mitigation work item, and again before marking a work item
   - [ ] Build and test validation
 
   - **Files**:
-    - `path/to/test-file.cs`: [Description of changes]
-    - `path/to/supporting-file.cs`: [Description of changes]
+    - `path/to/test-file.cs`: [Description of changes; include exact path and symbol or line references when known]
+    - `path/to/supporting-file.cs`: [Description of changes; include exact path and symbol or line references when known]
   - **Work Item Dependencies**: [Dependencies and sequencing]
   - **User Instructions**: [Instructions for user/reviewer]
 

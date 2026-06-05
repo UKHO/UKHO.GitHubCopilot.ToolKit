@@ -17,12 +17,14 @@ This wiki is intended for contributors who need to:
 
 | Asset type | Primary location | Purpose |
 | --- | --- | --- |
+| Repository governance | `AGENTS.md`, `lessons.md` | Captures repository-wide operating policy and durable maintenance learnings |
 | Repository instructions | `.github/copilot-instructions.md` | Shared repo-wide guidance for reusable Microsoft project assets |
 | Scoped instructions | `.github/instructions/` | File-type, workflow, stack, or folder-specific rules applied by context |
 | Custom agents | `.github/agents/` | Reusable specialist agents for creation, review, planning, and execution workflows |
 | Prompt files | `.github/prompts/` | Reusable prompt entry points for prompt, instruction, agent, and documentation authoring |
 | Templates | `.github/templates/` | Reusable scaffolds that standardize new prompts, agents, instructions, plans, and documentation artifacts |
-| Agent skills | `.github/skills/` (not currently present) | Task-specific skills that agents can auto-discover when present |
+| Validation scripts | `.github/scripts/` | Repeatable inventory, drift-check, and documentation-consistency checks for the asset library |
+| Agent skills | `.github/skills/` (currently empty) | Task-specific skills that agents can auto-discover when present |
 | Wiki | `docs/wiki/` | Human-readable reference documentation for the repository |
 
 ## Start here
@@ -47,6 +49,8 @@ This repository is designed around a staged documentation and delivery flow:
 7. review maintainability and address refactoring opportunities through execution steps that also refresh the wiki when required
 
 The repository also includes utility prompts for authoring new prompts, agents, instructions, and broader documentation, while templates provide the repeatable structures those workflows fill in.
+
+`AGENTS.md` and `lessons.md` complement that model at the repository root. They capture the operating style and durable learnings that should influence how reusable assets are authored and maintained. The validation scripts under `.github/scripts/` support that model by making inventory, drift, and documentation-consistency checks repeatable.
 
 ## Microsoft Learn alignment
 

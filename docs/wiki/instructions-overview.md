@@ -33,8 +33,14 @@ This repository uses that capability to keep guidance layered and reusable.
 - avoiding narrow product assumptions unless a file is explicitly scoped
 - preferring extension of existing shared assets over near-duplicate files
 - keeping reusable workflow documentation under `docs/`
+- treating `AGENTS.md` as the repository-level operating policy companion and `lessons.md` as the durable record of stable repository learnings
 - treating `docs/wiki/` as the project source of truth once the wiki baseline exists
 - requiring planning and project-update workflows to consult relevant wiki pages before acting and refresh affected wiki pages after changes
+
+These repo-wide instructions are complemented by the root governance files:
+
+- `AGENTS.md` for stable repository-wide operating rules that shape agent behavior
+- `lessons.md` for stable implementation, validation, and maintenance lessons worth preserving
 
 ### Scoped guidance
 
@@ -45,6 +51,7 @@ The `.github/instructions/` folder contains targeted instruction files for speci
 | Instruction file | `applyTo` scope | Purpose |
 | --- | --- | --- |
 | `auth.instructions.md` | `src/**/AppHost/**/*, src/**/*AppHost*.csproj, src/**/*.cs, src/**/*.csproj, src/**/*.json` | Standards-based authentication guidance for Microsoft projects |
+| `agentic-assets.instructions.md` | `AGENTS.md, lessons.md, .github/copilot-instructions.md, .github/agents/**/*.agent.md, .github/prompts/**/*.prompt.md, .github/templates/**/*.template.md` | Lean authoring guidance for governance files, agents, prompts, and templates |
 | `configuration.instructions.md` | `src/**/*.cs, src/**/*.csproj, src/**/*.json, src/**/*.razor, infra/**/*` | Configuration and secret handling guidance |
 | `csharp.instructions.md` | `**/*.cs` | Core C# coding guidance |
 | `docs.instructions.md` | `docs/**/*.md` | Markdown documentation structure and linking rules |
@@ -75,6 +82,7 @@ The repository instruction files generally follow these conventions:
 - MUST, SHOULD, and MUST NOT language for clarity
 - neutral guidance that can be reused across Microsoft projects
 - explicit `applyTo` scoping to avoid accidental global behavior
+- lean asset-authoring rules for reusable Copilot assets where focused execution, bounded investigation, and evidence-backed guidance matter
 
 ## When to add or extend an instruction file
 

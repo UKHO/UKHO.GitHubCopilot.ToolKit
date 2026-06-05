@@ -3,6 +3,8 @@
 > Use this template to review a work package under `./docs/00x-work/` and assess whether its current implementation would benefit from targeted refactoring. Ground findings in repository evidence, distinguish confirmed issues from assumptions, and keep recommendations specific enough to feed directly into follow-on planning.
 >
 > Review the relevant `./docs/wiki/` pages before starting the assessment so the review uses the current project baseline. If the review leads to follow-on changes that affect wiki-documented implementation guidance, architecture, testing guidance, or user-visible behavior, update the affected wiki pages before the resulting work is closed.
+>
+> Keep the report concise and evidence-led. Prefer exact `file:line` references and the smallest recommendation wording that still enables mitigation planning.
 
 ## Review scope
 
@@ -27,7 +29,7 @@
 
 | Area / requirement | Current implementation evidence | Issue type | Impact assessment | Recommendation |
 | --- | --- | --- | --- | --- |
-| `FR1` / `<area>` | `src/...` | Duplication / Complexity / Coupling / Naming / Boundary leakage / Testability / Dead code | `<impact>` | `<recommendation>` |
+| `FR1` / `<area>` | `src/...:20-74` | Duplication / Complexity / Coupling / Naming / Boundary leakage / Testability / Dead code | `<impact>` | `<recommendation>` |
 
 ## Existing implementation strengths
 

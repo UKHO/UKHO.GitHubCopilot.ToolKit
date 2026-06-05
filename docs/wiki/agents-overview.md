@@ -77,6 +77,9 @@ The repository agent set follows these conventions:
 - outputs are usually Markdown documents under `docs/` or updates to an existing numbered plan
 - workflow agents are meant to be reusable across Microsoft project types rather than tied to one product domain
 - agents are staged so later agents can consume earlier artifacts
+- agents prefer plan-first execution for non-trivial work and keep each chat focused on one primary outcome
+- agents prefer targeted reads, narrow searches, and evidence-backed conclusions over broad exploratory scanning
+- execution and review agents use explicit blocker escalation after repeated failed attempts instead of open-ended trial-and-error
 - workflow agents that plan, review, or execute work should consult the relevant `docs/wiki/` pages before acting
 - execution agents treat required wiki refresh as part of execution rather than as a separate follow-on stage
 

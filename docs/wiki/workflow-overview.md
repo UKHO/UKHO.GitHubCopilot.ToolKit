@@ -12,21 +12,24 @@ Once the relevant wiki pages exist, treat them as the source of truth for planni
 
 Where execution agents already embed the required wiki refresh in their own behavior, treat that wiki work as part of the execution step rather than as a separate stage.
 
+Within this repository, the token-thrift operating style documented in `AGENTS.md`, `lessons.md`, and `agentic-assets.instructions.md` acts as an efficiency layer over the staged workflow rather than replacing it. Contributors should still follow the same discovery, planning, execution, review, and wiki-refresh sequence; they should simply do it with tighter scope control, narrower evidence gathering, and more repeatable automation.
+
 ## Workflow summary
 
 The repository is organized around a progression from discovery to delivery, then to quality hardening:
 
 1. create the wiki baseline only when onboarding an existing project with implementation history but no wiki baseline
 2. review relevant wiki pages before every later planning or project-update task once those pages exist
-3. establish business intent
-4. establish system understanding
-5. review instruction coverage against the business and system baseline by using `review-instruction-coverage.agent.md` and close any approved coverage gaps with new scoped instructions
-6. define one work package
-7. design the technical approach
-8. plan delivery
-9. execute delivery, including creating or refreshing wiki content for new projects as the implementation takes shape
-10. review and strengthen testing
-11. review and improve maintainability
+3. review `AGENTS.md` and `lessons.md` when updating reusable repository assets so operating guidance and durable learnings are taken into account
+4. establish business intent
+5. establish system understanding
+6. review instruction coverage against the business and system baseline by using `review-instruction-coverage.agent.md` and close any approved coverage gaps with new scoped instructions
+7. define one work package
+8. design the technical approach
+9. plan delivery
+10. execute delivery, including creating or refreshing wiki content for new projects as the implementation takes shape
+11. review and strengthen testing
+12. review and improve maintainability
 
 ## Primary workflow sequence
 
@@ -146,9 +149,11 @@ Use the utility prompts and repository authoring agents when the goal is to exte
 Typical sequence:
 
 1. review the relevant `docs/wiki/` pages for the workflow or asset area being assessed
-2. `review-instruction-coverage.agent.md` when you need an evidence-based report of instruction coverage gaps against the wiki baseline
-3. `create-instructions.prompt.md` to add any approved missing scoped instruction files
-4. refresh the affected `docs/wiki/` pages after the instruction set changes
+2. review `AGENTS.md` for repository operating expectations and `lessons.md` for stable implementation and maintenance learnings
+3. `review-instruction-coverage.agent.md` when you need an evidence-based report of instruction coverage gaps against the wiki baseline
+4. `create-instructions.prompt.md` to add any approved missing scoped instruction files
+5. update `AGENTS.md` or `lessons.md` when the work reveals a stable repository-wide rule or lesson
+6. refresh the affected `docs/wiki/` pages after the instruction set changes
 
 ## How this aligns with Visual Studio Copilot
 

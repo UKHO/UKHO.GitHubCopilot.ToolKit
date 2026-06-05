@@ -3,6 +3,8 @@
 > Use this template to review a work package under `./docs/00x-work/` and assess whether its current automated tests provide sufficient coverage, strength, and confidence. Ground findings in repository evidence and separate confirmed gaps from assumptions.
 >
 > Review the relevant `./docs/wiki/` pages before starting the assessment so the review uses the current project baseline. If the review leads to follow-on changes that affect wiki-documented behavior or testing guidance, update the affected wiki pages before the resulting work is closed.
+>
+> Keep the report concise and mitigation-ready. Prefer exact `file:line` evidence and recommendation statements that can feed directly into a numbered mitigation plan.
 
 ## Review scope
 
@@ -27,7 +29,7 @@
 
 | Requirement / area | Existing coverage | Evidence | Gap assessment | Recommendation |
 | --- | --- | --- | --- | --- |
-| `FR1` | Covered / Partial / Missing | `test/...` | `<gap>` | `<recommendation>` |
+| `FR1` | Covered / Partial / Missing | `test/...:12-48` | `<gap>` | `<recommendation>` |
 
 ## Existing test strengths
 

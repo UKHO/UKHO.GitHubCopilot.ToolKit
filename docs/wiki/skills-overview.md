@@ -65,11 +65,12 @@ An agent can exist without repository skills. A skill can also be written so mul
 
 ## Current repository status
 
-The repository currently does **not** contain a `.github/skills/` directory or any workspace skills.
+The repository currently contains an empty `.github/skills/` directory but does **not** yet contain any workspace skills.
 
 That means:
 
 - the repository already documents agents, prompts, and instructions
+- the folder structure is already ready for future skill additions
 - the skill model is relevant for future extension
 - contributors should understand the skill pattern before adding new task-specific reusable capabilities
 

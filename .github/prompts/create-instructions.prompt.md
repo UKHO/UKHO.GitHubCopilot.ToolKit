@@ -53,12 +53,16 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 ### Core behavior
 
 - MUST: Accept the user's initial idea as input.
+- MUST: Keep the workflow focused on producing one primary `*.instructions.md` outcome.
+- MUST: Plan the drafting and question flow before iterating when the task is non-trivial.
 - MUST: After receiving the initial idea, run a short research phase using the `microsoft.docs.mcp` server when it improves correctness for Microsoft/.NET/Azure/GitHub/Copilot-related topics.
 - SHOULD: Prefer `microsoft_docs_search`, `microsoft_docs_fetch`, and `microsoft_code_sample_search` during research.
 - MUST: Apply research selectively (only when it improves correctness).
 - MUST: Cite the URLs relied on, or state "No external sources used" when research is not applicable.
+- MUST: Keep research and repository investigation narrowly scoped and avoid uncapped broad searches when a targeted lookup will answer the question.
 - MUST: Infer as much as possible from the user's initial idea and subsequent answers.
 - MUST: Review the relevant `docs/wiki/` pages before drafting instructions that govern planning workflows, project updates, implementation standards, or repository workflow behavior.
+- MUST: Review `./AGENTS.md` and `./lessons.md` when the new instruction will govern reusable repository assets or workflow behavior.
 - MUST: Inspect the existing instruction files and prefer extending or referencing an existing scoped instruction when that avoids creating a near-duplicate rule set.
 - MUST: Ask clarifying questions until there is enough detail to output a high-quality instructions file.
 - MUST: Ask only one question at a time.
@@ -67,6 +71,7 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 - MUST: When the instruction file governs planning workflows or project updates, require contributors to consult the relevant `docs/wiki/` pages before acting and to refresh the affected wiki pages after later implementation or system changes so the wiki remains the source of truth.
 - MUST: When the generated instruction file can govern code-changing workflows that require wiki updates, require contributors to create the wiki baseline under `./docs/wiki/` first if it does not exist when the update is needed.
 - MUST: When the instruction file defines repository coding, stack, or test standards, distinguish repository defaults from absolute mandates and describe how justified deviations should be documented when appropriate.
+- MUST: Stop after three failed attempts at the same research or drafting approach and surface the blocker with the evidence gathered so far.
 
 ### Repo conventions
 
@@ -81,6 +86,7 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 - MUST: Prefer patterns consistent with existing `./.github/instructions/*.instructions.md` files.
 - MUST NOT: Include unrelated rules outside the declared scope.
 - MUST NOT: Use vague guidance ("do it properly", "use best practices") without measurable criteria.
+- MUST NOT: Produce chatty wrapper text around the final artifact when the final markdown document is ready.
 - MUST NOT: Present repository default standards as absolute mandates unless the constraint is genuinely mandatory for the scoped files or workflow.
 - MUST NOT: Create a new instructions file that substantially duplicates an existing repository instruction when the guidance can be reused, referenced, or extended coherently.
 - SHOULD: Use MUST / SHOULD / MUST NOT phrasing for determinism.
@@ -91,11 +97,12 @@ ${RESEARCH_MODE="auto"} <!-- auto | always | never: controls whether to run a do
 1. Extract what you can from the initial idea.
 2. Research (if applicable) using `microsoft.docs.mcp` to improve correctness.
 3. Review the relevant `docs/wiki/` pages when the instruction scope affects planning workflows, project updates, implementation standards, or repository workflow behavior, and ensure any wiki refresh it requires happens after the relevant implementation or system change.
-4. Inspect the current repository instruction coverage and prefer extending existing scoped instructions when that is sufficient.
-5. Ask one clarifying question at a time until all required input and template sections can be completed.
-6. Keep an in-chat draft updated after every user answer.
-7. Turn the collected information into enforceable MUST/SHOULD/MUST NOT rules.
-8. Validate the final file against the Constraints.
+4. Review `./AGENTS.md` and `./lessons.md` when the requested instruction affects reusable repository asset behavior.
+5. Inspect the current repository instruction coverage and prefer extending existing scoped instructions when that is sufficient.
+6. Ask one clarifying question at a time until all required input and template sections can be completed.
+7. Keep an in-chat draft updated after every user answer.
+8. Turn the collected information into enforceable MUST/SHOULD/MUST NOT rules.
+9. Validate the final file against the Constraints.
 
 ### Start condition
 

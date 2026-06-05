@@ -56,7 +56,10 @@ The reusable prompt files in this repository follow these patterns:
 - they describe a single primary outcome
 - they include structured sections such as purpose, inputs, constraints, process, and output format
 - they prefer one-question-at-a-time authoring when the prompt is interactive
+- they prefer lean, exact outputs over chatty wrapper text when the deliverable format is known
+- they prefer targeted repository reads and capped research over broad exploratory searching
 - they favor reusable Microsoft-project wording instead of repository-specific product assumptions
+- they review `AGENTS.md` and `lessons.md` when the prompt creates or changes reusable repository assets
 - when they guide planning or project updates, they direct contributors to consult the relevant wiki pages before acting and to refresh the wiki after changes
 
 These conventions are reinforced by `.github/instructions/prompts.instructions.md`.

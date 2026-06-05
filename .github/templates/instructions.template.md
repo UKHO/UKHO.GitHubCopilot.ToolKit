@@ -21,16 +21,19 @@ Applies to: `<applyTo>`
 
 - <non-negotiable rule written as an imperative sentence>
 - <non-negotiable rule written as an imperative sentence>
+- <if relevant, require one primary outcome and plan-first behavior for non-trivial workflows>
 
 ### SHOULD
 
 - <preferred rule that is not required in all cases>
 - <preferred rule that is not required in all cases>
+- <if relevant, prefer narrow evidence-based investigation, precise `file:line` references, and reusable automation>
 
 ### MUST NOT
 
 - <prohibited rule>
 - <prohibited rule>
+- <if relevant, forbid near-duplicate assets, uncapped broad searches, or repeated failed attempts without escalation>
 
 ## Output and Validation (optional)
 
@@ -48,4 +51,4 @@ Applies to: `<applyTo>`
 
 ## Notes (optional)
 
-- <Assumptions, constraints, or clarifications>
+- <Assumptions, constraints, or clarifications, including where stricter lean-execution rules should or should not apply>

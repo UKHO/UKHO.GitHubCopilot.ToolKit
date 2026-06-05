@@ -3,6 +3,8 @@
 > Use this template to plan how the issues identified in a work-package refactoring review will be mitigated. Keep the plan actionable, traceable to the review findings, and aligned to the repository refactoring guidance so maintainability improves without unintended behavior changes.
 >
 > Review the relevant `./docs/wiki/` pages before drafting this plan so refactoring work stays aligned with the current project understanding. Include wiki updates whenever the mitigation work changes wiki-documented implementation guidance, architecture, testing guidance, local development guidance, or user-visible behavior.
+>
+> Keep work items execution-ready and lean. Prefer exact finding identifiers, file references, and validation commands over descriptive filler.
 
 ## Summary
 
@@ -71,8 +73,8 @@ Before starting *any* mitigation work item, and again before marking a work item
   - [ ] Build and test validation
 
   - **Files**:
-    - `path/to/source-file.cs`: [Description of changes]
-    - `path/to/test-file.cs`: [Description of changes]
+    - `path/to/source-file.cs`: [Description of changes; include exact path and symbol or line references when known]
+    - `path/to/test-file.cs`: [Description of changes; include exact path and symbol or line references when known]
     - `docs/wiki/...`: [Description of documentation changes]
   - **Work Item Dependencies**: [Dependencies and sequencing]
   - **User Instructions**: [Instructions for user/reviewer]

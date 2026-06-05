@@ -19,10 +19,12 @@ In the suggested workflow, establish a wiki baseline under [`docs/wiki/`](./docs
 ## What this repository contains
 
 - **Wiki documentation** under [`docs/wiki/`](./docs/wiki/index.md) that explains the repository model, the recommended workflow, and how the asset types fit together
+- **Repository governance** in [`AGENTS.md`](./AGENTS.md) and [`lessons.md`](./lessons.md) for durable operating guidance and reusable learnings
 - **Prompts** under [`.github/prompts/`](./.github/prompts/) for reusable authoring and workflow entry points
 - **Instructions** under [`.github/instructions/`](./.github/instructions/) to guide consistent and effective Copilot usage
 - **Agents** under [`.github/agents/`](./.github/agents/) that support specific planning, review, and execution scenarios
 - **Templates** under [`.github/templates/`](./.github/templates/) for creating consistent repository assets and documentation artifacts
+- **Validation scripts** under [`.github/scripts/`](./.github/scripts/) for repeatable inventory, drift, and documentation-consistency checks
 - **Documentation** under [`docs/`](./docs/) to explain how to use the available tools and resources
 
 ## What the wiki covers
@@ -44,7 +46,8 @@ This repository's suggested approach is to:
 
 1. create or refresh the [wiki baseline](./docs/wiki/index.md)
 2. review the relevant [workflow](./docs/wiki/workflow-overview.md) and [instruction](./docs/wiki/instructions-overview.md) guidance
-3. use the repository prompts, instructions, agents, and templates to plan and deliver work, with execution steps refreshing affected wiki pages when required
+3. review [`AGENTS.md`](./AGENTS.md) and [`lessons.md`](./lessons.md) when creating or changing reusable repository assets
+4. use the repository prompts, instructions, agents, templates, and validation scripts to plan and deliver work, with execution steps refreshing affected wiki pages when required
 
 That approach is intentionally opinionated because it gives teams a repeatable starting point. It should be treated as a reusable pattern rather than the only way to use GitHub Copilot effectively.
 

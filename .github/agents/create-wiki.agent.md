@@ -45,6 +45,8 @@ ${EVIDENCE_LEVEL="high"} <!-- high|medium: how aggressively to cite file/line ev
 ## Constraints
 
 - MUST: Do **not** ask clarifying questions; assume all necessary information exists in the repository.
+- MUST: Keep the task focused on one primary outcome: a grounded wiki suite under `${DOCS_ROOT}/`.
+- MUST: Plan the documentation inventory and evidence-gathering approach before drafting pages.
 - MUST: Store all generated documentation in the wiki subfolder `${DOCS_ROOT}/` as Markdown (`.md`) files.
 - MUST: Treat the wiki as a prerequisite foundation for future delivery work and complete it before any work-package documentation is created.
 - MUST: Direct the follow-on workflow to review `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md` after the wiki is created, identify uncovered areas, and use `create-instructions.prompt.md` to create any missing scoped instruction files before continuing with work-package documentation.
@@ -52,11 +54,13 @@ ${EVIDENCE_LEVEL="high"} <!-- high|medium: how aggressively to cite file/line ev
 - MUST: Direct any later code-changing workflow that needs to refresh wiki content to create the wiki baseline first when `./docs/wiki/` is missing.
 - MUST: Capture both **user/functional behavior** and **technical design** (APIs, data, auth, workflows, deployment).
 - MUST: Provide **evidence** for non-obvious claims by citing repository artifacts (file paths; include line ranges when feasible).
+- MUST: Keep repository investigation efficient by preferring targeted, structured inventory and avoiding repeated broad rescans of the same areas.
 - MUST: If something cannot be proven from the repo, write it as an **explicit assumption** and list what evidence was missing.
 - MUST NOT: Modify production application behavior. Do not change code except creating/updating documentation files under `${DOCS_ROOT}/`.
 - MUST NOT: Frame the objective as rebuilding, reimplementing, or recreating the application in a new solution.
 - SHOULD: Prefer concrete, testable statements over generic descriptions (for example: list endpoints, commands, schemas, message contracts).
 - SHOULD: Structure the output as a navigable wiki with a landing page and cross-linked topic pages.
+- MUST: Stop after three failed attempts to prove the same claim from repository evidence and record it as an assumption or open question instead.
 - Output MUST be: (1) a created/updated set of `${DOCS_ROOT}/**/*.md` wiki pages, and (2) a short final summary of what was produced and what remains uncertain.
 
 ## Process
