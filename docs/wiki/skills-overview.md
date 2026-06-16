@@ -65,7 +65,7 @@ An agent can exist without repository skills. A skill can also be written so mul
 
 ## Current repository status
 
-The repository currently contains an empty `.github/skills/` directory but does **not** yet contain any workspace skills.
+The repository does **not** currently contain a tracked `.github/skills/` directory and does **not** yet contain any workspace skills (Git does not store empty folders).
 
 That means:
 
