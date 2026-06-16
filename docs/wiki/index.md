@@ -24,7 +24,7 @@ This wiki is intended for contributors who need to:
 | Prompt files | `.github/prompts/` | Reusable prompt entry points for prompt, instruction, agent, and documentation authoring |
 | Templates | `.github/templates/` | Reusable scaffolds that standardize new prompts, agents, instructions, plans, and documentation artifacts |
 | Validation scripts | `.github/scripts/` | Repeatable inventory, drift-check, and documentation-consistency checks for the asset library |
-| Agent skills | `.github/skills/` (currently empty) | Task-specific skills that agents can auto-discover when present |
+| Agent skills | `.github/skills/` (not currently present) | Task-specific skills that agents can auto-discover when present |
 | Wiki | `docs/wiki/` | Human-readable reference documentation for the repository |
 
 ## Start here
