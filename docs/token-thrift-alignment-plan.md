@@ -15,8 +15,7 @@ This plan describes how to bring the repository's existing agents, instructions,
 - Sample agents and prompts already use `gpt-5.4`, but they do not consistently encode token-thrift behaviors such as capped output, explicit search ordering, or bounded retry rules.
 - Templates currently emphasize quality and wiki alignment, but they do not yet make token efficiency, narrow output shapes, or tool budgeting first-class requirements.
 - The repository does not currently include `AGENTS.md` or `lessons.md`, both of which are required by the proposed approach for durable operating rules and learnings.
-- `.github/skills/` exists as an empty folder, while `docs/wiki/skills-overview.md` still says the directory does not exist; that inconsistency should be corrected during documentation alignment.
-
+- `.github/skills/` is not currently tracked in the repository (Git does not store empty folders), so documentation should not describe it as present until a skill file is added.
 ## Scope and boundaries
 
 This plan covers:
