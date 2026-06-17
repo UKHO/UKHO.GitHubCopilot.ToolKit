@@ -15,7 +15,7 @@ Use this guidance to keep agentic work focused, efficient, and reviewable while 
 5. Cap tool output deliberately by using targeted file reads, narrow searches, and structured output where possible.
 6. Use precise evidence when referring to implementation details, preferably with `file:line` references when the medium supports them.
 7. Prefer semantic or code-graph search before repeated text grep when that gives a better signal-to-noise ratio.
-8. Choose model capability intentionally. Use lower-cost models for routine work when validated, and reserve `gpt-5.5` for higher-judgment tasks.
+8. Choose model capability intentionally. Use lower-cost models for routine work when validated, and reserve the highest-judgment validated model (currently `gpt-5.4`) for higher-judgment tasks.
 9. Read stable context before volatile context so repeated work benefits from consistent grounding.
 10. Parallelize independent read-only investigation where it improves throughput without reducing clarity.
 11. Delegate broad research to subagents when available, then consume and preserve only the useful summary.
