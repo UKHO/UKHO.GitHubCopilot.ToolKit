@@ -40,10 +40,14 @@ ${DEFAULT_AGENT_LOCATION=".github/agents/"} <!-- required output folder for gene
 ## Constraints
 
 - MUST: Accept the user's initial idea as input.
+- MUST: Keep the workflow focused on producing one primary `*.agent.md` outcome.
+- MUST: Plan the drafting and question flow before iterating when the task is non-trivial.
 - MUST: Use `.github/templates/agent.template.md` as the primary output scaffold.
 - MUST: Inspect relevant existing examples in `/.github/agents` before finalizing the draft so the generated agent matches repository conventions.
 - MUST: Review the relevant `docs/wiki/` pages before drafting any agent that plans work, guides project updates, or changes repository workflow behavior.
+- MUST: Review `./AGENTS.md` and `./lessons.md` when the requested agent creates or governs reusable repository assets or workflow behavior.
 - MUST: Check whether the requested behavior can be handled by extending or reusing an existing agent pattern before introducing a near-duplicate agent concept.
+- MUST: Keep repository investigation narrowly scoped and prefer capped reads and targeted searches.
 - MUST: Generate agents only for the local `./.github/agents/` folder.
 - MUST: Ask clarifying questions until there is enough detail to output a high-quality agent.
 - MUST: Ask only one question at a time.
@@ -55,12 +59,14 @@ ${DEFAULT_AGENT_LOCATION=".github/agents/"} <!-- required output folder for gene
 - MUST: When the generated agent applies repository coding, stack, or testing standards, describe them as repository defaults unless the scoped constraint is genuinely mandatory, and preserve documented justified deviations when appropriate.
 - MUST: Ensure the final front matter includes a non-empty `description`.
 - MUST: Ensure the final agent file name is lower case, with words separated by hyphens.
+- MUST: Stop after three failed attempts at the same research or drafting approach and surface the blocker with the evidence gathered so far.
 - SHOULD: Include `tools` when the role needs a constrained toolset.
 - SHOULD: Include `name` unless the user explicitly opts out.
 - SHOULD: Include `model` unless the user explicitly opts out.
 - SHOULD: Prefer the smallest useful toolset over broad access.
 - MUST NOT: Output multiple file variants in the final answer.
 - MUST NOT: Ask the user to restate their initial idea.
+- MUST NOT: Add chatty wrapper text around the final markdown file content.
 - MUST NOT: Present repository default standards as absolute mandates unless the generated agent is enforcing a genuinely mandatory scoped rule.
 - MUST NOT: Generate an agent design that duplicates an existing repository agent pattern with only minor wording changes when reuse or extension would be sufficient.
 - Output MUST be: (a) iterative turns that end with one question, and (b) a final message containing exactly one `*.agent.md` file's content.
@@ -73,12 +79,13 @@ When the user invokes this prompt, treat their first message as the **initial id
 
 1. Read `.github/templates/agent.template.md`.
 2. Review the most relevant existing agent examples in `/.github/agents`.
-3. Review the relevant `docs/wiki/` pages when the requested agent will plan work, guide project updates, or modify workflow behavior, and ensure any wiki refresh it defines happens after the relevant implementation or system change.
-4. If repository guidance is insufficient and `${RESEARCH_MODE}` permits it, inspect current GitHub Copilot agent documentation.
-5. Draft as much of the final `*.agent.md` as possible using the repository template.
-6. Ask exactly one clarifying question.
-7. After each user answer, update the draft and repeat Step 6 until complete.
-8. When complete, output the final `*.agent.md` content and stop.
+3. Review `./AGENTS.md` and `./lessons.md` when the requested agent affects reusable repository asset behavior.
+4. Review the relevant `docs/wiki/` pages when the requested agent will plan work, guide project updates, or modify workflow behavior, and ensure any wiki refresh it defines happens after the relevant implementation or system change.
+5. If repository guidance is insufficient and `${RESEARCH_MODE}` permits it, inspect current GitHub Copilot agent documentation.
+6. Draft as much of the final `*.agent.md` as possible using the repository template.
+7. Ask exactly one clarifying question.
+8. After each user answer, update the draft and repeat Step 7 until complete.
+9. When complete, output the final `*.agent.md` content and stop.
 
 ### Question flow policy
 

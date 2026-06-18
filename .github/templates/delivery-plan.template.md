@@ -3,6 +3,8 @@
 > Use this template to plan *when* and *in what increments* the technical specification will be delivered. Store the initial delivery plan as `plans/001-delivery-plan.md`. Each work item should reference relevant `FRx/NFx/SRx/...` and the sections in `../technical-specification.md` that implement them.
 >
 > Review the relevant `./docs/wiki/` pages before drafting this plan so sequencing and validation stay grounded in the current project understanding. Keep wiki-update work in scope whenever delivered changes alter wiki-documented behavior, architecture, APIs, local development guidance, operator guidance, or testing guidance.
+>
+> Keep this plan lean and execution-ready. Prefer exact file, folder, command, and requirement references over narrative explanation, and only include detail that helps an execution agent implement, validate, or roll back the work safely.
 
 ## Summary
 
@@ -60,7 +62,7 @@ The final plan may include one or more work items.
   - [ ] Build and test validation
   
   - **Files**:
-    - `path/to/file1.ts`: [Description of changes]
+    - `path/to/file1.ts`: [Description of changes; include exact path and symbol or line references when known]
   - **Work Item Dependencies**: [Dependencies and sequencing]
   - **User Instructions**: [Instructions for User]
 

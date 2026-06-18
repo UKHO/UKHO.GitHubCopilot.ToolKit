@@ -18,6 +18,7 @@ Applies to: `**/*`
 - Encourage established design and documentation principles such as clarity, separation of concerns, explicit dependencies, and reusable guidance.
 - Prefer technology guidance that is applicable across Microsoft projects unless a file is explicitly scoped to a narrower stack or workflow.
 - Keep repository assets adaptable so teams can reuse them in different Microsoft project contexts without inheriting assumptions from one specific solution.
+- Treat `./AGENTS.md` as the repository-level operating policy for agent execution style and `./lessons.md` as the durable record of stable repository learnings.
 
 ## Instructions
 
@@ -28,6 +29,9 @@ Applies to: `**/*`
 - Reuse and extend existing instructions, prompts, templates, and agents when they already cover the needed pattern closely enough, instead of creating near-duplicate repository assets.
 - Use placeholders, examples, and workflow descriptions that describe patterns rather than repository-specific implementations.
 - Keep documentation about repository workflows at the top level under `docs/` when the guidance is intended for reuse across multiple work packages or teams.
+- Review `./AGENTS.md` when creating or updating reusable agents, prompts, instructions, templates, or workflow documentation so the repository operating style stays consistent.
+- Update `./AGENTS.md` when a stable repository-wide execution pattern or operating constraint emerges that should guide future agent behavior.
+- Update `./lessons.md` when implementation, validation, or maintenance work reveals a stable lesson that future contributors should not need to rediscover.
 - For new or existing projects that begin using this repository workflow, create the wiki baseline first, then review `.github/copilot-instructions.md` and `.github/instructions/*.instructions.md`, identify uncovered areas, and add any missing scoped instruction files before creating work-package documentation.
 - Treat `docs/wiki/` as the current project source of truth for Copilot-assisted workflow decisions once the wiki baseline exists.
 - In prompts, agents, templates, and workflow documentation that guide planning or project updates, require contributors to review the relevant wiki pages before drafting plans, requirements, specifications, implementation changes, or workflow updates.
@@ -42,6 +46,7 @@ Applies to: `**/*`
 - Prefer reusable wording that can be adopted by teams building different kinds of Microsoft solutions, including services, libraries, web apps, automation, and documentation projects.
 - Prefer scoped instruction files for technology-specific rules rather than embedding stack-specific assumptions in repo-wide guidance.
 - Prefer evolving an existing shared asset when the change is additive and keeps the asset coherent.
+- Prefer recording stable operating rules and recurring lessons once in `./AGENTS.md` or `./lessons.md` and referencing them from other assets instead of duplicating the same wording.
 
 ### MUST NOT
 
@@ -55,6 +60,8 @@ Applies to: `**/*`
 - `https://learn.microsoft.com/`
 
 - `./.github/instructions/auth.instructions.md`
+- `./AGENTS.md`
+- `./lessons.md`
 - `./.github/instructions/configuration.instructions.md`
 - `./.github/instructions/csharp.instructions.md`
 - `./.github/instructions/docs.instructions.md`

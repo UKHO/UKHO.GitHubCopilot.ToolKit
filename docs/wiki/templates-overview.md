@@ -73,6 +73,7 @@ Templates help the repository stay reusable across Microsoft projects by making 
 - easier to review
 - easier to extend without inventing new formats each time
 - easier to align with the wiki-first workflow and instruction set
+- easier to keep focused, evidence-based, and economical when reusable assets are updated repeatedly
 
 They also reduce near-duplicate asset creation because contributors can start from an established pattern instead of inventing a new structure from scratch.
 
@@ -87,6 +88,8 @@ For example:
 - the related prompts and agents use those templates to guide consistent authoring
 
 In that sense, templates are part of the repository's implementation of the workflow rather than a separate workflow stage.
+
+The current template set also carries the repository's lean authoring conventions for reusable Copilot assets, including single-outcome workflows, plan-first execution for non-trivial work, bounded investigation, precise evidence references, and explicit blocker escalation after repeated failed attempts.
 
 ## Related pages
 
